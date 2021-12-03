@@ -1,0 +1,14 @@
+version: '3'
+services:
+  rtl433:
+    image: hertzg/rtl_433:latest
+    devices:
+      - '/dev/bus/usb/001/003'
+    command:
+      - '-G 4'
+      - '-S unknown'
+      - '-a 4'
+      - '-A'
+    volumes:
+      - .:/rtl_433
+    working_dir: /rtl_433

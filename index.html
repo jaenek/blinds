@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rolety</title>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  form {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    font-size: 1.1cm;
+  }
+  @media screen and (min-device-width: 1081px) {
+    form {
+      margin: auto;
+      width: max(800px, 30%);
+    }
+  }
+  @media screen and (min-device-width: 768px) and (max-device-width: 1080px) {
+    form {
+      margin-left: 10vw;
+      width: 80vw;
+    }
+  }
+  @media screen and (max-device-width: 767px) {
+    form {
+      width: 100vw;
+    }
+  }
+  form > * {
+    font-size: inherit;
+    text-align: center;
+    height: inherit;
+    border: none;
+  }
+  form *:nth-child(1n+2) {
+    border-top: 1px solid #555;
+  }
+  </style>
+</head>
+<body>
+  <form method="GET">
+    <select name="blind_nr">
+      <option value="1">Sypialnia</option>
+      <option value="2">Salon 1</option>
+      <option value="3">Salon 2</option>
+      <option value="4">Jadalnia</option>
+      <option value="5">Kuchnia</option>
+      <option value="6">Łazienka</option>
+      <option value="7">Michał 1</option>
+      <option value="8">Michał 2</option>
+      <option value="9">Janek</option>
+      <option value="10">Pokój</option>
+    </select>
+    <button type="submit" name="cmd" value="up">do góry</button>
+    <button type="submit" name="cmd" value="stop">stop</button>
+    <button type="submit" name="cmd" value="down">w dół</button>
+  </form>
+</body>
+</html>
